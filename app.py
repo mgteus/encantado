@@ -38,7 +38,7 @@ def main():
 
     with st.sidebar:
  
-        st.image(r'imgs\logo_evcomx 1.png')
+        st.image(r'imgs\logo_evcomx1.png')
         st.write('Contato: rodrigo.vecchia@evcomx.com.br')
 
     tab_mapa, tab_contato = st.tabs(['Mapa', 'Contato'])
