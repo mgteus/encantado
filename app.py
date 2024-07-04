@@ -6,7 +6,7 @@ import pandas as pd
 import folium
  
 
-st.set_page_config(page_title='Mapa', layout = 'wide', page_icon = 'Favicon.png', initial_sidebar_state = 'auto')
+st.set_page_config(page_title='Mapeamento Encantado', layout = 'wide', page_icon = 'imgs/Favicon.png', initial_sidebar_state = 'auto')
 
 
 def create_map():
@@ -36,16 +36,16 @@ def create_map():
 
 def main():
 
+    with st.sidebar:
+ 
+        st.image(r'imgs\logo_evcomx 1.png')
+        st.write('Contato: rodrigo.vecchia@evcomx.com.br')
 
     tab_mapa, tab_contato = st.tabs(['Mapa', 'Contato'])
 
 
     with tab_mapa:
-        col1, col2, col3 = st.columns(3)
 
-        with col1:
-            pass#st.slider('')
-        with col2:
                     #Exibir o mapa no Streamlit 
             st.title('Mapa de Endereços')
 
@@ -62,12 +62,10 @@ def main():
 
             # Show in webpage
             #st.header("Mapa de Endereços")
-            st.components.v1.html(html_data, scrolling=True, height=700, width=1000)
+            st.components.v1.html(html_data, scrolling=True, height=700, width=1200)
             
 
             st.write('Um oferecimento Evcomx')
-        with col3:
-            pass #st.button('Start')
 
     with tab_contato:
         st.write('Informaçoes da Evcomx')
