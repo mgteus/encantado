@@ -43,33 +43,27 @@ def main():
         st.image('logo_evcomx1.png')
         st.write('Contato: rodrigo.vecchia@evcomx.com.br')
 
-    tab_mapa, tab_contato = st.tabs(['Mapa', 'Contato'])
-
-
-    with tab_mapa:
                     #Exibir o mapa no Streamlit 
-            st.title('Mapa de Endereços')
+    st.title('Mapa de Endereços')
 
 
-            
-            mapa = create_map()
-            #st_folium(mapa)
+    
+    mapa = create_map()
+    #st_folium(mapa)
 
 
-            path_to_html = r"mapa_enderecos.html"
+    path_to_html = r"mapa_enderecos.html"
 
-            with open(path_to_html,'r', encoding='utf-8') as f: 
-                html_data = f.read()
+    with open(path_to_html,'r', encoding='utf-8') as f: 
+        html_data = f.read()
 
-            # Show in webpage
-            #st.header("Mapa de Endereços")
-            st.components.v1.html(html_data, scrolling=True, height=700, width=1200)
-            
+    # Show in webpage
+    #st.header("Mapa de Endereços")
+    st.components.v1.html(html_data, scrolling=True, height=500, width=1000)
+    
 
-            st.write('Um oferecimento Evcomx')
-
-    with tab_contato:
-        st.write('Informaçoes da Evcomx')
+    #st.write('Um oferecimento Evcomx')
+    
     return
 
 
