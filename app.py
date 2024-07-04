@@ -47,7 +47,6 @@ def main():
 
 
     with tab_mapa:
-            st.write(os.getcwd())
                     #Exibir o mapa no Streamlit 
             st.title('Mapa de Endereços')
 
