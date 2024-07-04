@@ -13,7 +13,7 @@ st.set_page_config(page_title='Mapeamento Encantado', layout = 'wide', page_icon
 
 def create_map():
     # Carregar o arquivo CSV com as coordenadas
-    df = pd.read_csv(r'enderecos_com_coordenadas_teste.csv', sep = ',')
+    df = pd.read_csv(r'enderecos_com_coordenadas.csv', sep = ',')
     
     # Coordenadas de Encantado, RS
     latitude_encantado = -29.2361
@@ -41,7 +41,7 @@ def main():
     with st.sidebar:
  
         st.image('logo_evcomx1.png')
-        st.write('Contato: rodrigo.vecchia@evcomx.com.br')
+        #st.write('Contato: rodrigo.vecchia@evcomx.com.br')
 
                     #Exibir o mapa no Streamlit 
     st.title('Mapa de Endereços')
@@ -63,10 +63,21 @@ def main():
     
 
     #st.write('Um oferecimento Evcomx')
-    
+
     return
+
+
 
 
 if __name__ == '__main__':
     
+
+    # df2 = pd.read_csv(r'C:\Users\Mateus\Workspace\random\encantado\enderecos_com_coordenadas_teste_2 (1).csv', sep=',', encoding='utf-8')
+
+    # df1 = pd.read_csv(r'C:\Users\Mateus\Workspace\random\encantado\enderecos_com_coordenadas_teste.csv', sep=',', encoding='utf-8')
+
+    # dffull = pd.concat([df1, df2], ignore_index=True)
+
+    # dffull.to_csv(r'C:\Users\Mateus\Workspace\random\encantado\enderecos_com_coordenadas.csv', encoding='utf-8')
+    #print(dffull.size)
     main()
