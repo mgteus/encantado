@@ -1,12 +1,14 @@
 import streamlit as st
 from streamlit_folium import st_folium #(#pip install streamlit-folium)
 import streamlit.components.v1 as components
+import os
+import pathlib
  
 import pandas as pd
 import folium
  
 
-st.set_page_config(page_title='Mapeamento Encantado', layout = 'wide', page_icon = 'imgs/Favicon.png', initial_sidebar_state = 'auto')
+st.set_page_config(page_title='Mapeamento Encantado', layout = 'wide', page_icon = 'Favicon.png', initial_sidebar_state = 'auto')
 
 
 def create_map():
@@ -38,14 +40,14 @@ def main():
 
     with st.sidebar:
  
-        st.image(r'imgs\logo_evcomx1.png')
+        st.image('logo_evcomx1.png')
         st.write('Contato: rodrigo.vecchia@evcomx.com.br')
 
     tab_mapa, tab_contato = st.tabs(['Mapa', 'Contato'])
 
 
     with tab_mapa:
-
+            st.write(os.getcwd())
                     #Exibir o mapa no Streamlit 
             st.title('Mapa de Endereços')
 
@@ -55,7 +57,7 @@ def main():
             #st_folium(mapa)
 
 
-            path_to_html = r"mapa_enderecos.html" 
+            path_to_html = r"mapa_enderecos.html"
 
             with open(path_to_html,'r', encoding='utf-8') as f: 
                 html_data = f.read()
